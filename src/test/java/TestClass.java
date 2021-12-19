@@ -3,6 +3,8 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.security.PublicKey;
+
 public class TestClass {
 
     public WebDriver driver;
@@ -23,4 +25,21 @@ public class TestClass {
 
         LoginPage.openLoginPage().addClearMethod().shortAuth(email, password);
     }
+
+    @Test
+    public void openUserSettingsRedactAndSubmit(){
+        String firstName = "FuriousDoggo";
+        String lastName = "SeriousDoggo";
+        UserSettingsClass SettingsClass = new UserSettingsClass(driver);
+
+        SettingsClass.openSettingsPage().addClearMethod2().shortMethod(firstName, lastName);
+
+    }
+
+    @Test
+    public void TestCombo(){
+        this.sendEmailAndPasswordTest();
+        this.openUserSettingsRedactAndSubmit();
+    }
+
 }
