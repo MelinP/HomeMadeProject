@@ -18,9 +18,9 @@ public class LoginClass extends MainClass {
         this.openPage(LOGIN_URL);
         return this;
     }
-    public LoginClass addClearMethod(){
-        driver.findElement(emailLocator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        driver.findElement(passwordLocator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+    public LoginClass CleaEmailAndPassword(){
+        this.addClearMethod(emailLocator);
+        this.addClearMethod(passwordLocator);
         return this;
     }
 

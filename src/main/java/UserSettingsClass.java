@@ -39,9 +39,9 @@ public class UserSettingsClass extends MainClass {
         return this;
     }
 
-    public UserSettingsClass addClearMethod2(){
-        driver.findElement(firstName).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        driver.findElement(lastName).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+    public UserSettingsClass clearFids(){
+        this.addClearMethod(firstName);
+        this.addClearMethod(lastName);
         return this;
     }
 

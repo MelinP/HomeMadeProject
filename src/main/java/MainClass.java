@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -42,6 +43,10 @@ public class MainClass {
         WebElement element = waitForElementPresentAndClear(locator);
         element.sendKeys(value);
         return element;
+    }
+
+    public void addClearMethod(By locator){
+        driver.findElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
     }
 
 

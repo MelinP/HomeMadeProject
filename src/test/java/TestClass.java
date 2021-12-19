@@ -23,7 +23,7 @@ public class TestClass {
         String password = "A12345678";
         LoginClass LoginPage = new LoginClass(driver);
 
-        LoginPage.openLoginPage().addClearMethod().shortAuth(email, password);
+        LoginPage.openLoginPage().CleaEmailAndPassword().shortAuth(email, password);
     }
 
     @Test
@@ -32,8 +32,7 @@ public class TestClass {
         String lastName = "SeriousDoggo";
         UserSettingsClass SettingsClass = new UserSettingsClass(driver);
 
-        SettingsClass.openSettingsPage().addClearMethod2().shortMethod(firstName, lastName);
-
+        SettingsClass.openSettingsPage().clearFids().shortMethod(firstName, lastName);
     }
 
     @Test
